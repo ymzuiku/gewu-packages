@@ -1,0 +1,13 @@
+[33mgewu-http:build[0m: cache hit, replaying output [2md0e7988b3168f9ea[0m
+[33mgewu-http:build: [0m
+[33mgewu-http:build: [0m> gewu-http@0.0.9 build /Users/liangzhu/Documents/work/gewu/packages/gewu-http
+[33mgewu-http:build: [0m> yarn cjs
+[33mgewu-http:build: [0m
+[33mgewu-http:build: [0myarn run v1.22.17
+[33mgewu-http:build: [0mwarning package.json: No license field
+[33mgewu-http:build: [0mwarning ../../../../../package.json: No license field
+[33mgewu-http:build: [0m$ esbuild --define:process.env.NODE_ENV=\"production\" lib/index.ts --outdir=cjs --target=es6  --bundle  --external:react --external:react-ob --format=cjs --minify
+[33mgewu-http:build: [0m
+[33mgewu-http:build: [0m  cjs/index.js  2.4kb
+[33mgewu-http:build: [0m
+[33mgewu-http:build: [0mDone in 0.08s.

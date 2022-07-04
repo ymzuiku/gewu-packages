@@ -1,0 +1,28 @@
+{
+  "name": "gewu-ob",
+  "version": "2.2.8",
+  "main": "lib/index.ts",
+  "types": "lib/index.ts",
+  "exports": {
+    "import": "./lib/index.ts",
+    "require": "./cjs/index.js"
+  },
+  "private": false,
+  "scripts": {
+    "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle --inject:./react-shim.js --external:react --format=esm --minify --splitting",
+    "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle --inject:./react-shim.js --external:react --format=cjs --minify",
+    "build": "yarn cjs"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.10",
+    "react": "^18.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "bugs": {
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+}

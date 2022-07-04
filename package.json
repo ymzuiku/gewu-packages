@@ -1,0 +1,20 @@
+{
+  "name": "gewu-packages",
+  "version": "0.0.0",
+  "description": "",
+  "main": "vitest.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ymzuiku/gewu-packages/issues"
+  },
+  "homepage": "https://github.com/ymzuiku/gewu-packages#readme"
+}

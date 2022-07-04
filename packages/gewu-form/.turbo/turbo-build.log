@@ -1,0 +1,12 @@
+[34mgewu-form:build[0m: cache hit, replaying output [2m2f626eb2cda2d15a[0m
+[34mgewu-form:build: [0m
+[34mgewu-form:build: [0m> gewu-form@0.0.23 build /Users/liangzhu/Documents/work/gewu/packages/gewu-form
+[34mgewu-form:build: [0m> yarn cjs
+[34mgewu-form:build: [0m
+[34mgewu-form:build: [0myarn run v1.22.17
+[34mgewu-form:build: [0mwarning ../../../../../package.json: No license field
+[34mgewu-form:build: [0m$ esbuild --define:process.env.NODE_ENV=\"production\" lib/index.ts --outdir=cjs --target=es6  --bundle --inject:./react-shim.js --external:react --external:react-ob --format=cjs --minify
+[34mgewu-form:build: [0m
+[34mgewu-form:build: [0m  cjs/index.js  7.5kb
+[34mgewu-form:build: [0m
+[34mgewu-form:build: [0mDone in 0.06s.

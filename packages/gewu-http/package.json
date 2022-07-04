@@ -1,0 +1,37 @@
+{
+  "name": "gewu-http",
+  "version": "0.0.9",
+  "private": false,
+  "main": "lib/index.ts",
+  "types": "lib/index.ts",
+  "exports": {
+    "import": "./lib/index.ts",
+    "require": "./cjs/index.js"
+  },
+  "description": "前后端同构接口约定与校验",
+  "scripts": {
+    "example:client": "bike example/src/client.ts example/www --browser",
+    "example:server": "bike example/src/server.ts example/www/server.js --dev",
+    "example": "pnpm example:client & pnpm example:server",
+    "example:www": "live-server --proxy=/v1:http://127.0.0.1:3800/v1 example/www",
+    "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle  --external:react --external:react-ob --format=esm --minify --splitting",
+    "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle  --external:react --external:react-ob --format=cjs --minify",
+    "build": "yarn cjs"
+  },
+  "devDependencies": {
+    "fastify": "^4.0.3",
+    "yup": "^0.32.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "bugs": {
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "homepage": "git+https://github.com/ymzuiku/gewu-packages.git",
+  "dependencies": {
+    "zod": "^3.17.3",
+    "zod-flat": "workspace:*"
+  }
+}

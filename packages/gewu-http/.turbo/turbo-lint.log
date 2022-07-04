@@ -1,0 +1,5 @@
+[35mdobe:lint[0m: cache hit, replaying output [2me81313417bd70bff[0m
+[35mdobe:lint: [0m
+[35mdobe:lint: [0m> dobe@0.0.6 lint /Users/liangzhu/Documents/work/gewu/packages/dobe
+[35mdobe:lint: [0m> eslint '**/*.ts*'
+[35mdobe:lint: [0m

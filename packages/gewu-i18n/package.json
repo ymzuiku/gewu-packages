@@ -1,0 +1,33 @@
+{
+  "name": "gewu-i18n",
+  "version": "0.0.9",
+  "private": false,
+  "license": "MIT",
+  "main": "lib/index.ts",
+  "types": "lib/index.ts",
+  "exports": {
+    "import": "./lib/index.ts",
+    "require": "./cjs/index.js"
+  },
+  "dependencies": {
+    "up-dir-env": "workspace:*",
+    "esbuild": "^0.14.45",
+    "fs-extra": "^10.1.0",
+    "node-fetch": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/react-window": "^1.8.5"
+  },
+  "bin": {
+    "gewu-i18n": "./bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "bugs": {
+    "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+  },
+  "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+}

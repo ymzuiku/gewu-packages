@@ -1,0 +1,5 @@
+[32mvouter:lint[0m: cache hit, replaying output [2mafd912382d2a4934[0m
+[32mvouter:lint: [0m
+[32mvouter:lint: [0m> vouter@0.1.5 lint /Users/liangzhu/Documents/work/gewu/packages/vouter
+[32mvouter:lint: [0m> eslint '**/*.ts*'
+[32mvouter:lint: [0m

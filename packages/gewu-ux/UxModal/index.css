@@ -1,0 +1,111 @@
+.uxmodal-bg-enter {
+  opacity: 0;
+}
+.uxmodal-bg-enter-active {
+  opacity: 1;
+  transition: opacity 370ms;
+}
+.uxmodal-bg-exit {
+  opacity: 1;
+}
+.uxmodal-bg-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.uxmodal-scale-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.uxmodal-scale-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 250ms, transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.uxmodal-scale-exit {
+  opacity: 1;
+}
+.uxmodal-scale-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 250ms, transform 250ms ease;
+}
+
+.uxmodal-from-bottom-enter {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 250ms, transform 250ms ease;
+}
+
+.uxmodal-from-bottom-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms, transform 250ms ease;
+}
+
+.uxmodal-from-bottom-exit {
+  opacity: 1;
+}
+
+.uxmodal-from-bottom-exit-active {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 250ms, transform 250ms;
+}
+
+.uxmodal-from-top-enter {
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-top-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-top-exit {
+  opacity: 1;
+}
+.uxmodal-from-top-exit-active {
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 250ms, transform 250ms;
+}
+
+.uxmodal-from-right-enter {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-right-exit {
+  opacity: 1;
+}
+.uxmodal-from-right-exit-active {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 250ms, transform 250ms;
+}
+
+.uxmodal-from-left-enter {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 250ms, transform 250ms ease;
+}
+.uxmodal-from-left-exit {
+  opacity: 1;
+}
+.uxmodal-from-left-exit-active {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 250ms, transform 250ms;
+}

@@ -1,0 +1,24 @@
+import { FieldHOC } from "gewu-form";
+import { UxCheckbox, UxCheckboxProps } from "../UxCheckbox";
+import { UxColorPicker, UxColorPickerProps } from "../UxColorPicker";
+import { UxGroup, UxGroupProps } from "../UxGroup";
+import { UxIconPicker, UxIconPickerProps } from "../UxIconPicker";
+import { UxInput, UxInputProps } from "../UxInput";
+import { UxOption } from "../UxOption";
+import { UxSelect, UxSelectProps } from "../UxSelect";
+import { UxSelectCard, UxSelectCardProps } from "../UxSelectCard";
+import { UxSortPicks, UxSortPicksProps } from "../UxSortPicks";
+import { UxSwitch, UxSwitchProps } from "../UxSwitch";
+import { UxTextArea, UxTextAreaProps } from "../UxTextarea";
+
+export const UxInputField = FieldHOC<UxInputProps>(UxInput);
+export const UxOptionField = FieldHOC<UxCheckboxProps>(UxOption);
+export const UxCheckboxField = FieldHOC<UxCheckboxProps>(UxCheckbox);
+export const UxSwitchField = FieldHOC<UxSwitchProps>(UxSwitch);
+export const UxGroupField = FieldHOC<UxGroupProps>(UxGroup);
+export const UxSelectField = FieldHOC<UxSelectProps>(UxSelect);
+export const UxColorPickerField = FieldHOC<UxColorPickerProps>(UxColorPicker);
+export const UxIconPickerField = FieldHOC<UxIconPickerProps>(UxIconPicker);
+export const UxSelectCardField = FieldHOC<UxSelectCardProps>(UxSelectCard);
+export const UxTextAreaField = FieldHOC<UxTextAreaProps>(UxTextArea);
+export const UxSortPicksField = FieldHOC<UxSortPicksProps>(UxSortPicks);

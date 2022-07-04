@@ -1,0 +1,339 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 9,
+    "total": 9,
+    "workspacePrefix": "/Users/liangzhu/Documents/work/gewu-packages"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-packages",
+      "version": "0.0.0",
+      "description": "",
+      "main": "vitest.config.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/ymzuiku/gewu-packages/issues"
+      },
+      "homepage": "https://github.com/ymzuiku/gewu-packages#readme"
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-http",
+      "version": "0.0.9",
+      "private": false,
+      "main": "lib/index.ts",
+      "types": "lib/index.ts",
+      "exports": {
+        "import": "./lib/index.ts",
+        "require": "./cjs/index.js"
+      },
+      "description": "前后端同构接口约定与校验",
+      "scripts": {
+        "example:client": "bike example/src/client.ts example/www --browser",
+        "example:server": "bike example/src/server.ts example/www/server.js --dev",
+        "example": "pnpm example:client & pnpm example:server",
+        "example:www": "live-server --proxy=/v1:http://127.0.0.1:3800/v1 example/www",
+        "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle  --external:react --external:react-ob --format=esm --minify --splitting",
+        "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle  --external:react --external:react-ob --format=cjs --minify",
+        "build": "yarn cjs"
+      },
+      "devDependencies": {
+        "fastify": "^4.0.3",
+        "yup": "^0.32.11"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git",
+      "dependencies": {
+        "zod": "^3.17.3",
+        "zod-flat": "workspace:*"
+      }
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-http"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-i18n",
+      "version": "0.0.9",
+      "private": false,
+      "license": "MIT",
+      "main": "lib/index.ts",
+      "types": "lib/index.ts",
+      "exports": {
+        "import": "./lib/index.ts",
+        "require": "./cjs/index.js"
+      },
+      "dependencies": {
+        "up-dir-env": "workspace:*",
+        "esbuild": "^0.14.45",
+        "fs-extra": "^10.1.0",
+        "node-fetch": "^3.2.6"
+      },
+      "devDependencies": {
+        "@types/fs-extra": "^9.0.13",
+        "@types/react-window": "^1.8.5"
+      },
+      "bin": {
+        "gewu-i18n": "./bin.js"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-i18n"
+  },
+  "4 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-ob",
+      "version": "2.2.8",
+      "main": "lib/index.ts",
+      "types": "lib/index.ts",
+      "exports": {
+        "import": "./lib/index.ts",
+        "require": "./cjs/index.js"
+      },
+      "private": false,
+      "scripts": {
+        "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle --inject:./react-shim.js --external:react --format=esm --minify --splitting",
+        "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle --inject:./react-shim.js --external:react --format=cjs --minify",
+        "build": "yarn cjs"
+      },
+      "devDependencies": {
+        "@types/react": "^18.0.10",
+        "react": "^18.1.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-ob"
+  },
+  "5 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-thread",
+      "version": "0.1.5",
+      "main": "cjs/index.js",
+      "private": false,
+      "types": "lib/index.ts",
+      "description": "利用线程池执行您的 Nodejs",
+      "keywords": [
+        "nodejs",
+        "pool"
+      ],
+      "scripts": {
+        "serve": "bike lib/serve.ts serve.js",
+        "index": "bike lib/index.ts cjs/index.js",
+        "build": "npm run index && npm run serve"
+      },
+      "dependencies": {
+        "fastify": "^4.0.3",
+        "piscina": "^3.2.0"
+      },
+      "bin": {
+        "gewu-thread": "bin.js"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-thread"
+  },
+  "6 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-utils",
+      "version": "0.0.2",
+      "main": "index.ts",
+      "types": "index.ts",
+      "private": false,
+      "description": "前后端同构的常用方法",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git",
+      "dependencies": {
+        "dayjs": "^1.11.3"
+      }
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-utils"
+  },
+  "7 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-form",
+      "version": "0.0.23",
+      "types": "lib/index.ts",
+      "exports": {
+        "import": "./lib/index.ts",
+        "require": "./cjs/index.js"
+      },
+      "resolutions": {
+        "react": "17.0.2"
+      },
+      "peerDependencies": {
+        "react": ">=16.8.0"
+      },
+      "private": false,
+      "scripts": {
+        "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle --inject:./react-shim.js --external:react --external:react-ob --format=esm --minify --splitting",
+        "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle --inject:./react-shim.js --external:react --external:react-ob --format=cjs --minify",
+        "build": "yarn cjs"
+      },
+      "devDependencies": {
+        "@types/react": "^18.0.10",
+        "react": "^18.1.0",
+        "yup": "^0.32.11",
+        "zod": "^3.17.3"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git",
+      "dependencies": {
+        "gewu-ob": "workspace:*",
+        "react-override-props": "workspace:*",
+        "zod-flat": "workspace:*",
+        "set-get-in": "^0.1.0"
+      }
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-form"
+  },
+  "8 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-route",
+      "version": "0.1.5",
+      "types": "lib/index.ts",
+      "private": false,
+      "exports": {
+        "import": "./lib/index.ts",
+        "require": "./cjs/index.js"
+      },
+      "resolutions": {
+        "react": "17.0.2"
+      },
+      "peerDependencies": {
+        "react": ">=16.8.0"
+      },
+      "scripts": {
+        "esm": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=esm --target=es6  --bundle --inject:./react-shim.js --external:react --external:react-ob --format=esm --minify --splitting",
+        "cjs": "esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.ts --outdir=cjs --target=es6  --bundle --inject:./react-shim.js --external:react --external:react-ob --format=cjs --minify",
+        "build": "yarn cjs"
+      },
+      "devDependencies": {
+        "eslint-config-custom": "workspace:*",
+        "ts-config-custom": "workspace:*",
+        "@types/fs-extra": "^9.0.13",
+        "@types/react": "^18.0.10",
+        "react": "^18.1.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git",
+      "dependencies": {
+        "gewu-ob": "workspace:*",
+        "react-override-props": "workspace:*"
+      }
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-route"
+  },
+  "9 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "gewu-ux",
+      "version": "0.0.0",
+      "main": "./index.tsx",
+      "private": true,
+      "types": "./index.tsx",
+      "dependencies": {
+        "@dnd-kit/core": "^6.0.5",
+        "@dnd-kit/modifiers": "^6.0.0",
+        "@dnd-kit/sortable": "^7.0.1",
+        "@dnd-kit/utilities": "^3.2.0",
+        "@types/react-transition-group": "^4.4.5",
+        "gewu-form": "workspace:*",
+        "gewu-utils": "workspace:*",
+        "react": "^18.1.0",
+        "react-colorful": "^5.5.1",
+        "react-dom": "^18.2.0",
+        "gewu-ob": "workspace:*",
+        "react-override-props": "workspace:*",
+        "gewu-i18n": "workspace:*",
+        "react-transition-group": "^4.4.2",
+        "react-window": "^1.8.7",
+        "gewu-route": "workspace:*"
+      },
+      "devDependencies": {
+        "@types/react-window": "^1.8.5"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "bugs": {
+        "url": "git+https://github.com/ymzuiku/gewu-packages.git"
+      },
+      "homepage": "git+https://github.com/ymzuiku/gewu-packages.git"
+    },
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages/packages/gewu-ux"
+  },
+  "10 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/liangzhu/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/liangzhu/Documents/work/gewu-packages/node_modules/.pnpm"
+  },
+  "11 debug pnpm:stage": {
+    "prefix": "/Users/liangzhu/Documents/work/gewu-packages",
+    "stage": "resolution_started"
+  },
+  "12 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "In packages/gewu-http: No matching version found for zod-flat@* inside the workspace",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+      "stack": "pnpm: In packages/gewu-http: No matching version found for zod-flat@* inside the workspace\n    at tryResolveFromWorkspace (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:85900:15)\n    at resolveNpm (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:85792:39)\n    at Object.resolve (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:86022:34)\n    at ctx.requestsQueue.add.priority (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:93202:75)\n    at run (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:92963:90)\n    at PQueue._tryToStartAnother (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:92917:13)\n    at /Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:92976:16\n    at new Promise (<anonymous>)\n    at PQueue.add (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:92958:16)\n    at resolveAndFetch (/Users/liangzhu/node_global/lib/node_modules/pnpm/dist/pnpm.cjs:93202:55)"
+    }
+  }
+}

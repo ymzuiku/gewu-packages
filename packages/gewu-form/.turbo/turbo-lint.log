@@ -1,0 +1,5 @@
+[32mless-form:lint[0m: cache hit, replaying output [2md2e4b54b2c2f0ff0[0m
+[32mless-form:lint: [0m
+[32mless-form:lint: [0m> less-form@0.0.20 lint /Users/liangzhu/Documents/work/gewu/packages/less-form
+[32mless-form:lint: [0m> eslint '**/*.ts*'
+[32mless-form:lint: [0m
